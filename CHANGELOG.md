@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [3.0.0] — 2026-08-02
+
+### ⚙️ CI / Tooling
+
+- update CI configuration to specify platforms and build configurations `(d6178e6)` — Kiarash Minoo
+
 ## [2.0.0] — 2026-08-02
 
 ### ⚙️ CI / Tooling
