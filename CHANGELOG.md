@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.0.2] — 2026-08-02
+
+### 🏠 Chores
+
+- mark project as non-packable in PasswordGeneratorCLI.csproj `(e354e46)` — Kiarash Minoo
+
 ## [1.0.1] — 2026-08-02
 
 ### ♻️ Refactoring
