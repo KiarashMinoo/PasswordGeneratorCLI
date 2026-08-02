@@ -1,4 +1,4 @@
-using AdvancedPassGenerator;
+using KiarashMinoo.PasswordGenerator;
 
 if (args.Length == 0 || args[0] is "--help" or "-h")
 {
@@ -52,7 +52,7 @@ foreach (var arg in args)
 
 try
 {
-    var password = AdvancedPassGenerator.PasswordGenerator.Generate(length, config =>
+    var password = PasswordGenerator.Generate(length, config =>
     {
         config.IncludeUpperCase = settings.IncludeUpperCase;
         config.IncludeLowerCase = settings.IncludeLowerCase;

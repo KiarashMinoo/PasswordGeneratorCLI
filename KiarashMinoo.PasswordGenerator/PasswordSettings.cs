@@ -1,4 +1,4 @@
-﻿namespace AdvancedPassGenerator;
+﻿namespace KiarashMinoo.PasswordGenerator;
 
 /// <summary>
 /// Defines settings for password generation, allowing customization of character inclusion, sequence prevention, and more.

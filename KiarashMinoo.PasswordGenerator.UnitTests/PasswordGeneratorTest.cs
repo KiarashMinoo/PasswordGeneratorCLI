@@ -1,71 +1,70 @@
 ﻿using JetBrains.Annotations;
-using AdvancedPassGenerator;
 
-namespace AdvancedPassGenerator.UnitTests;
+namespace KiarashMinoo.PasswordGenerator.UnitTests;
 
-[TestSubject(typeof(AdvancedPassGenerator.PasswordGenerator))]
+[TestSubject(typeof(PasswordGenerator))]
 public class PasswordGeneratorTest
 {
     [Fact]
     public void Generate_ShouldReturnPassword_OfCorrectLength()
     {
         const int length = 12;
-        var password = AdvancedPassGenerator.PasswordGenerator.Generate(length);
+        var password = PasswordGenerator.Generate(length);
         Assert.Equal(length, password.Length);
     }
 
     [Fact]
     public void Generate_ShouldThrowException_WhenLengthIsLessThanFour()
     {
-        Assert.Throws<ArgumentException>(() => AdvancedPassGenerator.PasswordGenerator.Generate(3));
+        Assert.Throws<ArgumentException>(() => PasswordGenerator.Generate(3));
     }
 
     [Fact]
     public void Generate_ShouldIncludeUpperCase_WhenEnabled()
     {
-        var password = AdvancedPassGenerator.PasswordGenerator.Generate(10, settings => settings.IncludeUpperCase = true);
+        var password = PasswordGenerator.Generate(10, settings => settings.IncludeUpperCase = true);
         Assert.Contains(password, char.IsUpper);
     }
 
     [Fact]
     public void Generate_ShouldNotIncludeUpperCase_WhenDisabled()
     {
-        var password = AdvancedPassGenerator.PasswordGenerator.Generate(10, settings => settings.IncludeUpperCase = false);
+        var password = PasswordGenerator.Generate(10, settings => settings.IncludeUpperCase = false);
         Assert.DoesNotContain(password, char.IsUpper);
     }
 
     [Fact]
     public void Generate_ShouldIncludeNumbers_WhenEnabled()
     {
-        var password = AdvancedPassGenerator.PasswordGenerator.Generate(10, settings => settings.IncludeNumbers = true);
+        var password = PasswordGenerator.Generate(10, settings => settings.IncludeNumbers = true);
         Assert.Contains(password, char.IsDigit);
     }
 
     [Fact]
     public void Generate_ShouldNotIncludeNumbers_WhenDisabled()
     {
-        var password = AdvancedPassGenerator.PasswordGenerator.Generate(10, settings => settings.IncludeNumbers = false);
+        var password = PasswordGenerator.Generate(10, settings => settings.IncludeNumbers = false);
         Assert.DoesNotContain(password, char.IsDigit);
     }
 
     [Fact]
     public void Generate_ShouldIncludeSymbols_WhenEnabled()
     {
-        var password = AdvancedPassGenerator.PasswordGenerator.Generate(10, settings => settings.IncludeSymbols = true);
-        Assert.Contains(password, c => AdvancedPassGenerator.PasswordGenerator.Symbols.Contains(c));
+        var password = PasswordGenerator.Generate(10, settings => settings.IncludeSymbols = true);
+        Assert.Contains(password, c => PasswordGenerator.Symbols.Contains(c));
     }
 
     [Fact]
     public void Generate_ShouldPreventDuplicateCharacters_WhenEnabled()
     {
-        var password = AdvancedPassGenerator.PasswordGenerator.Generate(10, settings => settings.PreventDuplicateCharacters = true);
+        var password = PasswordGenerator.Generate(10, settings => settings.PreventDuplicateCharacters = true);
         Assert.True(IsUnique(password));
     }
 
     [Fact]
     public void Generate_ShouldPreventSequentialCharacters_WhenEnabled()
     {
-        var password = AdvancedPassGenerator.PasswordGenerator.Generate(10, settings => settings.PreventSequentialCharacters = true);
+        var password = PasswordGenerator.Generate(10, settings => settings.PreventSequentialCharacters = true);
         Assert.False(HasSequentialCharacters(password));
     }
 
