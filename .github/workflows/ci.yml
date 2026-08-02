@@ -26,6 +26,8 @@ jobs:
       nuget-filter-enabled: true
       platforms: '["AnyCpu"]'
       configurations: '["Release"]'
+      dotnet-versions: 10.0.x
+      bump-component: patch
     secrets:
       gh-token: ${{ secrets.GITHUB_TOKEN }}
       push-token: ${{ secrets.ADMIN_PUSH_TOKEN }}

@@ -1,4 +1,4 @@
-using PasswordGenerator;
+using AdvancedPassGenerator;
 
 if (args.Length == 0 || args[0] is "--help" or "-h")
 {
@@ -52,7 +52,7 @@ foreach (var arg in args)
 
 try
 {
-    var password = PasswordGenerator.PasswordGenerator.Generate(length, config =>
+    var password = AdvancedPassGenerator.PasswordGenerator.Generate(length, config =>
     {
         config.IncludeUpperCase = settings.IncludeUpperCase;
         config.IncludeLowerCase = settings.IncludeLowerCase;

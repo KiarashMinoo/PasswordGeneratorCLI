@@ -1,7 +1,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace PasswordGenerator;
+namespace AdvancedPassGenerator;
 
 /// <summary>Provides cryptographically secure password generation.</summary>
 public sealed class PasswordGenerator
