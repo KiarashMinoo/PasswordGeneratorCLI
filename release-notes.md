@@ -4,6 +4,7 @@
 
 - rename PasswordGenerator to AdvancedPassGenerator and update project files `(443ebce)` — Kiarash Minoo
 - update README.md and project files for AdvancedPassGenerator `(6b033e0)` — Kiarash Minoo
+- rename PasswordGenerator to KiarashMinoo.PasswordGenerator and update project files `(07ca1f6)` — Kiarash Minoo
 
 ### ⚙️ CI / Tooling
 
@@ -26,3 +27,4 @@
 - bump version to 2.0.0 [skip ci] `(1f59bf1)` — github-actions[bot]
 - bump version to 3.0.0 [skip ci] `(d90a022)` — github-actions[bot]
 - update project files for improved configuration and package management `(c0e1f78)` — Kiarash Minoo
+- bump version to 1.0.1 [skip ci] `(b5cde5e)` — github-actions[bot]
