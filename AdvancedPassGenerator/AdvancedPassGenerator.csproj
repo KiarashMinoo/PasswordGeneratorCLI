@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>latestmajor</LangVersion>
@@ -17,6 +17,7 @@
     <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="..\README.md" Pack="true" PackagePath="" />
+    <None Include="README.md" Pack="true" PackagePath="README.md" />
+    <None Include="icon.png" Pack="true" PackagePath="icon.png" />
   </ItemGroup>
 </Project>

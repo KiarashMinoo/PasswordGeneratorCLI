@@ -1,41 +1,42 @@
-# PasswordGenerator
+# AdvancedPassGenerator
 
-A small .NET library and CLI for generating cryptographically secure passwords with customizable character sets.
+A small .NET solution for secure password generation. It contains a reusable NuGet library, a command-line application, and automated tests.
 
-## Install
+## Projects
+
+- [`AdvancedPassGenerator`](AdvancedPassGenerator/README.md) — reusable `netstandard2.0` library and NuGet package.
+- [`PasswordGeneratorCLI`](PasswordGeneratorCLI/README.md) — command-line interface for generating passwords.
+- [`AdvancedPassGenerator.UnitTests`](AdvancedPassGenerator.UnitTests/README.md) — xUnit tests for the library.
+
+## Quick start
+
+Install the library:
 
 ```bash
-dotnet add package PasswordGenerator
+dotnet add package AdvancedPassGenerator
 ```
 
-## Library usage
-
-```csharp
-using PasswordGenerator;
-
-var password = Generator.Generate(24, options => {
-    options.IncludeSymbols = true;
-    options.BeginWithLetter = true;
-    options.PreventDuplicateCharacters = true;
-});
-```
-
-`Generator` uses `RandomNumberGenerator`. Custom character sets, duplicate prevention, and sequential-character prevention are supported. Impossible combinations fail with an exception instead of returning a password that violates the requested constraints.
-
-## CLI
+Or run the CLI from the repository root:
 
 ```bash
 dotnet run --project PasswordGeneratorCLI -- 20 --symbols --no-duplicates --no-sequential --begin-with-letter
 ```
 
-Options: `--no-uppercase`, `--no-lowercase`, `--no-numbers`, `--symbols`, `--no-duplicates`, `--no-sequential`, and `--begin-with-letter`.
-
-## Build and test
+## Build, test, and package
 
 ```bash
-dotnet build
-dotnet test
-dotnet pack PasswordGenerator/PasswordGenerator.csproj --configuration Release
+dotnet restore
+dotnet build PasswordGenerator.sln --configuration Release
+dotnet test PasswordGenerator.sln --configuration Release
+dotnet pack AdvancedPassGenerator/AdvancedPassGenerator.csproj --configuration Release
 ```
 
-The package targets `netstandard2.0` and `netstandard2.1`.
+The library uses `RandomNumberGenerator`, supports custom character sets and generation constraints, and rejects impossible configurations instead of silently violating them. The generated NuGet package includes the library README and icon.
+
+## Repository automation
+
+GitHub Actions runs build, test, package, dependency, and security checks. Dependabot monitors NuGet and GitHub Actions dependencies.
+
+## License
+
+MIT
