@@ -1,6 +1,6 @@
-﻿using PasswordGeneratorCLI;
+using PasswordGenerator;
 
-if (args.Length == 0 || args[0] == "--help")
+if (args.Length == 0 || args[0] is "--help" or "-h")
 {
     Console.WriteLine("Usage: PasswordGeneratorCLI <length> [options]");
     Console.WriteLine("Options:");
@@ -10,7 +10,7 @@ if (args.Length == 0 || args[0] == "--help")
     Console.WriteLine("  --symbols         Include symbols");
     Console.WriteLine("  --no-duplicates   Prevent duplicate characters");
     Console.WriteLine("  --no-sequential   Prevent sequential characters");
-    Console.WriteLine("  --begin-with-letter  Start password with a letter instead of a number");
+    Console.WriteLine("  --begin-with-letter  Start password with a letter");
     return;
 }
 
@@ -44,7 +44,7 @@ foreach (var arg in args)
         case "--no-sequential":
             settings.PreventSequentialCharacters = true;
             break;
-        case "--start-with-num":
+        case "--begin-with-letter":
             settings.BeginWithLetter = true;
             break;
     }
@@ -52,7 +52,7 @@ foreach (var arg in args)
 
 try
 {
-    var password = PasswordGenerator.Generate(length, config =>
+    var password = PasswordGenerator.PasswordGenerator.Generate(length, config =>
     {
         config.IncludeUpperCase = settings.IncludeUpperCase;
         config.IncludeLowerCase = settings.IncludeLowerCase;

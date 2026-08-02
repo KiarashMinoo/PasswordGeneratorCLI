@@ -1,4 +1,4 @@
-﻿namespace PasswordGeneratorCLI;
+﻿namespace PasswordGenerator;
 
 /// <summary>
 /// Defines settings for password generation, allowing customization of character inclusion, sequence prevention, and more.

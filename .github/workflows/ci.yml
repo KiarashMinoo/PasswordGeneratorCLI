@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [main]   
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref == 'refs/heads/main' }}
+
+jobs:  
+  ci:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    permissions:
+      contents: write
+      packages: write
+      id-token: write
+      actions: write
+    uses: KiarashMinoo/.github/.github/workflows/reusable-ci.yml@main
+    with:
+      channel: release
+      solution-path: 'PasswordGenerator.sln'
+      publish-to-nuget: true
+      nuget-target: 'nuget.org'
+      nuget-auth-mode: 'classic'
+      nuget-filter-enabled: true
+    secrets:
+      gh-token: ${{ secrets.GITHUB_TOKEN }}
+      push-token: ${{ secrets.ADMIN_PUSH_TOKEN }}
+      nuget-api-key: ${{ secrets.NUGET_API_KEY }}
