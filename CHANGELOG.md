@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.0.4] — 2026-09-14
+
+### ⚙️ CI / Tooling
+
+- PasswordGeneratorCLI: switch NuGet publish to OIDC trusted publishing `(4468b63)` — Kiarash Minoo
+
 ## [1.0.3] — 2026-09-14
 
 ### 📦 Dependencies

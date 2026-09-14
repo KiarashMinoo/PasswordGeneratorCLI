@@ -1,10 +1,5 @@
-## [1.0.3] — 2026-09-14
+## [1.0.4] — 2026-09-14
 
-### 📦 Dependencies
+### ⚙️ CI / Tooling
 
-| Package | Old | New |
-|---------|-----|-----|
-| Microsoft.NET.Test.Sdk | 18.8.1 | 18.10.0 |
-| xunit.runner.visualstudio | 3.1.5 | 4.0.0 |
-
-- Bump the testing group with 2 updates `(7fec006)` — dependabot[bot]
+- PasswordGeneratorCLI: switch NuGet publish to OIDC trusted publishing `(4468b63)` — Kiarash Minoo
