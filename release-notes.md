@@ -1,5 +1,9 @@
-## [1.0.4] — 2026-09-14
+## [1.0.5] — 2026-09-22
 
-### ⚙️ CI / Tooling
+### 📦 Dependencies
 
-- PasswordGeneratorCLI: switch NuGet publish to OIDC trusted publishing `(4468b63)` — Kiarash Minoo
+| Package | Old | New |
+|---------|-----|-----|
+| Microsoft.NET.Test.Sdk | 18.10.0 | 18.10.1 |
+
+- Bump the testing group with 1 update `(a550856)` — dependabot[bot]
