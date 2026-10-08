@@ -2,12 +2,13 @@
 
 A small .NET solution for secure password generation. It contains a reusable NuGet library, a command-line application, and automated tests.
 
+[![Architecture diagram](https://gitdiagram.com/diagram-badge.svg)](https://gitdiagram.com/kiarashminoo/passwordgeneratorcli?utm_source=readme&utm_medium=badge)
+
 ## Projects
 
 - [`AdvancedPassGenerator`](AdvancedPassGenerator/README.md) — reusable `netstandard2.0` library and NuGet package.
 - [`PasswordGeneratorCLI`](PasswordGeneratorCLI/README.md) — command-line interface for generating passwords.
 - [`AdvancedPassGenerator.UnitTests`](AdvancedPassGenerator.UnitTests/README.md) — xUnit tests for the library.
-- [![Architecture diagram](https://gitdiagram.com/diagram-badge.svg)](https://gitdiagram.com/kiarashminoo/passwordgeneratorcli?utm_source=readme&utm_medium=badge)
 
 ## Quick start
 
