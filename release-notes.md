@@ -1,9 +1,5 @@
-## [1.0.5] — 2026-09-22
+## [1.0.6] — 2026-10-08
 
-### 📦 Dependencies
+### 📝 Documentation
 
-| Package | Old | New |
-|---------|-----|-----|
-| Microsoft.NET.Test.Sdk | 18.10.0 | 18.10.1 |
-
-- Bump the testing group with 1 update `(a550856)` — dependabot[bot]
+- Add architecture diagram badge to README `(8ffc913)` — Kiarash Minoo

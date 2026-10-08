@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.0.6] — 2026-10-08
+
+### 📝 Documentation
+
+- Add architecture diagram badge to README `(8ffc913)` — Kiarash Minoo
+
 ## [1.0.5] — 2026-09-22
 
 ### 📦 Dependencies
