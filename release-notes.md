@@ -1,5 +1,5 @@
-## [1.0.6] — 2026-10-08
+## [1.0.7] — 2026-10-08
 
 ### 📝 Documentation
 
-- Add architecture diagram badge to README `(8ffc913)` — Kiarash Minoo
+- Add architecture diagram badge to README `(39ea8cf)` — Kiarash Minoo
